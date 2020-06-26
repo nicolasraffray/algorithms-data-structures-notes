@@ -1,6 +1,5 @@
 import math
 
-
 def binary_search(array, item):
   low = 0
   high = len(array)-1
