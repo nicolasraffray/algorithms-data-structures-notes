@@ -13,3 +13,7 @@ class TestSelectionSort:
   def test_sorts_larger_array(self):
     result = selection_sort([9,5,6,3,4])
     assert result == [3,4,5,6,9]
+
+  def test_sorts_larger_array_with_multiple_values(self):
+    result = selection_sort([5,2,2,5,2,5,2,5,8,6,8,9])
+    assert result == [2,2,2,2,5,5,5,5,6,8,8,9]
