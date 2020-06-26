@@ -7,7 +7,7 @@ class TestBinarySearch:
     array = [1,1,2,3,5]
     result = binary_search(array, 3)
     
-    assert type(result) is int or None 
+    assert type(result) is int
 
   def test_simple_list(self):
     array = [1,2,4]
@@ -26,6 +26,14 @@ class TestBinarySearch:
     item = 8
     result = binary_search(array,item)
     assert result == 4
+
+  def test_will_return_None_when_item_not_in_list(self):
+    array = [1,2,4,6,8,10,160]
+    item = 12
+    result = binary_search(array,item)
+    assert result is None
+
+    
 
   
 

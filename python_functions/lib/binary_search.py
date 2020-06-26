@@ -7,7 +7,6 @@ def binary_search(array, item):
   
   while low <= high: 
     mid = math.trunc((low + high )/2)
-    print(mid)
     guess = array[mid]
     if guess == item:
       return int(mid)
@@ -15,6 +14,8 @@ def binary_search(array, item):
       low = mid + 1 
     else:
       high = mid - 1 
+
+  return None
     
 
 
