@@ -36,6 +36,8 @@ i.e. if you have an array of 128 length it will take 7 steps to get there. If th
 
 Find the mininum element of the array and insert it into the beginning of the new array. Repeat looking in the main unsorted array for the next minimum value until all elements have been exhaused.
 
+#### Performance
+
 This process is O(n^2) as you have to go through n elements for the array n times.
 
 ## Data Structures
