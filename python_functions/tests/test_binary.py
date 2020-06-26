@@ -15,4 +15,18 @@ class TestBinarySearch:
     result = binary_search(array, item)
     assert result == 1
 
+  def test_even_list(self):
+    array = [1,2,4,6,8,10]
+    item = 2
+    result = binary_search(array,item)
+    assert result == 1 
+
+  def test_odd_list(self):
+    array = [1,2,4,6,8,10,160]
+    item = 8
+    result = binary_search(array,item)
+    assert result == 4
+
+  
+
 

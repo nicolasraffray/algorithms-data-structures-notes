@@ -1,7 +1,22 @@
+import math
+
 
 def binary_search(array, item):
   low = 0
-  high = len(array) -1
-  guess = (high + low) /2 
-  guess = int(guess)
-  return guess
+  high = len(array)-1
+  
+  while low <= high: 
+    mid = math.trunc((low + high )/2)
+    print(mid)
+    guess = array[mid]
+    if guess == item:
+      return int(mid)
+    elif guess < item:
+      low = mid + 1 
+    else:
+      high = mid - 1 
+    
+
+
+
+
