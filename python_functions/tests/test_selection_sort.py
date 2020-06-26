@@ -9,3 +9,7 @@ class TestSelectionSort:
   def test_sorts_small_array(self):
     result = selection_sort([9,5])
     assert result == [5,9]
+
+  def test_sorts_larger_array(self):
+    result = selection_sort([9,5,6,3,4])
+    assert result == [3,4,5,6,9]

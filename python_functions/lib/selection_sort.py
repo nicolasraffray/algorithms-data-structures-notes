@@ -1,7 +1,6 @@
 def selection_sort(array):
-  if array[0] > array[1]:
-    array[1], array[0] = array[0], array[1]
-    
-
-
+  for i in range(len(array)):
+    for j in range(i+1, len(array)):
+      if array[i] > array[j]:
+        array[i], array[j] = array[j], array[i]    
   return array
