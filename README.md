@@ -81,6 +81,8 @@ These are a set of recursive algorithmns. They are divised using two steps:
 1. Figure out the simplest base case
 2. Divide or decrease the problem until it becomes the base case
 
+An example of one of these algorithms is Euclids Algorithm which is an algorithm for computing the greatest common divisor (GCD). This is done through successive division until there is no longer a remainder and we have arrived at the base case.
+
 ## Data Structures
 
 ---
