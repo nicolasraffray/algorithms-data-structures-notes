@@ -87,6 +87,10 @@ An example of one of these algorithms is Euclids Algorithm which is an algorithm
 
 ### Quick Sort
 
+Quick-Sort is a type of recursive D&C algorithm. However, the idea behind the algorithm is focused on a pivot.
+
+One of the items in the array, the goal is to put the pivot in the correct position in the final array. All items to the right are larger and all items to the left are smaller.
+
 #
 
 ## Data Structures
