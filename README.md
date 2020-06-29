@@ -83,6 +83,12 @@ These are a set of recursive algorithmns. They are divised using two steps:
 
 An example of one of these algorithms is Euclids Algorithm which is an algorithm for computing the greatest common divisor (GCD). This is done through successive division until there is no longer a remainder and we have arrived at the base case.
 
+---
+
+### Quick Sort
+
+#
+
 ## Data Structures
 
 ---
