@@ -13,6 +13,11 @@ class TestQuickSort:
     result = quick_sort(array)
     assert result ==  [1,2]
 
+  def test_larger_array_usinging_recursion(self):
+    array = [4,6,5,3,2,8,9]
+    result = quick_sort(array)
+    assert result == [2,3,4,5,6,8,9]
+
 
 
 
