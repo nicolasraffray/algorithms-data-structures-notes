@@ -101,6 +101,18 @@ The pivot is typically selected as the first element of the array. However anoth
 
 On average quikcsort tkaes O(n log n) comparisons to sort items. however, in the worst case it is O(n^2)
 
+#### Understanding Average Performance and Worst Case Performance
+
+Quick sort doesnt check if the array is already sorted.
+
+Worst Performance: If the array is already sorted the two arrays are created at every iteration one where the array is empty and the other with all of the remaining elements asside from the pivot. **The height of the call stack will be the length of the array**.
+
+Average Case: In the average case, where the array isn't sorted, pivots are selected randomly. Hence the number of levels in the call stack is log(n).
+
+#
+
+NB: The constant almost never matters for simple search versus binary search, because O(log n) is so much faster than O(n) when your list gets big.
+
 ## Data Structures
 
 ---
