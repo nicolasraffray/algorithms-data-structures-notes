@@ -8,6 +8,12 @@ class TestQuickSort:
     result = quick_sort(array)
     assert result == [1]
 
+  def test_can_switch_two_unsorted_elements(self):
+    array = [2,1]
+    result = quick_sort(array)
+    assert result ==  [1,2]
+
+
 
 
 
