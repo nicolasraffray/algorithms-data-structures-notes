@@ -34,6 +34,8 @@ The goal of Big O Notation is to describe the speed of an algorithm in terms of 
 
 Big O describes how the algorithm performs as the input set grows.
 
+On big O charts the input size goes along the x-axis and time along the y.
+
 ##### Why should Big O be used?
 
 It establishes the worst case run of your algorithm, the most number of iterations it will take the algorithm.
@@ -95,7 +97,9 @@ So, quicksort gives 2 arrays one with the numbers greater than the pivot and one
 
 The pivot is typically selected as the first element of the array. However another popular method is to just select the first element of the array.
 
-#
+#### Performance
+
+On average quikcsort tkaes O(n log n) comparisons to sort items. however, in the worst case it is O(n^2)
 
 ## Data Structures
 
