@@ -113,6 +113,12 @@ Average Case: In the average case, where the array isn't sorted, pivots are sele
 
 NB: The constant almost never matters for simple search versus binary search, because O(log n) is so much faster than O(n) when your list gets big.
 
+---
+
+### Breadth Search
+
+This algorithm models the problem as a graph
+
 ## Data Structures
 
 ---
@@ -211,3 +217,17 @@ If the hash function is bad the worst case is linear time, O(n). If linked lists
 Hash Tables can be used for Caching.
 
 **Caching:** A cache is a temporary storage area. For example, the files you automatically request by looking at a Web page are stored on your hard disk in a cache subdirectory under the directory for your browser. When you return to a page you've recently looked at, the browser can get those files from the cache rather than the original server, saving you time and saving the network the burden of additional traffic.
+
+---
+
+### Graphs
+
+Graphs are an abstract datatype that model a set of connections.
+
+Their structure is a finite set of **nodes** (or vertices), which are connected as unordered pairs. These connections are known as **edges**. Nodes that are connected are commonly reffered to as **neighbours**.
+
+- _Directed Graph_: Contains an ordereed pair of vertices.
+
+- _Undirected Graph_: Contains an unordered pair of vertices
+
+![Graphs](/images/Graphs.png)
