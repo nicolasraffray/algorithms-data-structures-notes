@@ -115,9 +115,38 @@ NB: The constant almost never matters for simple search versus binary search, be
 
 ---
 
-### Breadth Search
+#### Breadth First Search
 
-This algorithm models the problem as a graph
+Summary:
+
+1. Keep a queue containing nodes to check.
+2. Pop a node off the queue.
+3. Check whether it matches the node you are looking for.
+   4a. If yes then done.
+   4b. If No add their neighbours to the queue.
+4. Loop
+5. If queue empty the node is not there.
+
+This algorithm models the problem as a graph.
+
+What is it trying to solve?
+
+- Is there an existing path from A to B?
+- What is the path from A to B?
+
+First the algorithm looks through the entire network for a path adding nodes and their connecting nodes to a list until the relevant node has been found.
+
+Once the node is found you want to figure out how many degrees of separation you are from that node. First Degree connections are added to a list for searching first and then second degrees and so on.
+
+The data structure for holding the elements to be searched is called a _queue_. A queue has only two operations _enqueue_ and _dequeue_. A queue is **FIFO** First in first out. Compared to a stack which is **LIFO** Last in first out.
+
+A record should also be kept of the nodes that have been searched to avoid infinite loops.
+
+#### Performance
+
+To search an entire network one needs to go along all edges O(E). Adding one person to the queue taking constant time O(1). Then do this for every node O(V).
+
+Hence performance is on average O(E + V)
 
 ## Data Structures
 
@@ -228,6 +257,22 @@ Their structure is a finite set of **nodes** (or vertices), which are connected 
 
 - _Directed Graph_: Contains an ordereed pair of vertices.
 
-- _Undirected Graph_: Contains an unordered pair of vertices
+- _Undirected Graph_: Contains an unordered pair of vertices. Both nodes are eachothers neighbours. Hence no arrows in the diagram below.
 
 ![Graphs](/images/Graphs.png)
+
+What does this look like in code?
+
+Lets take the examples of English Cities and Towns
+
+```python
+graph = {}
+graph["London"] = ["Watford", "Slough", "Croydon"]
+graph["Watford"] = ["Luton"]
+graph["Slough"] = ["Reading"]
+graph["Croydon"] = []
+graph["Luton"] = []
+graph["Reading"] = []
+```
+
+The keys represent the nodes and the arrays are the neighbours.
