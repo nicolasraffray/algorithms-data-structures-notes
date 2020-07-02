@@ -42,7 +42,7 @@ It establishes the worst case run of your algorithm, the most number of iteratio
 
 #### Big O Examples:
 
-![GitHub Logo](/images/BigO_graph.png)
+![BigO](/images/BigO_graph.png)
 
 - O(log(n)) - _Log Time_: Binary Search
 - O(n) - _Linear Time_: Simple search
@@ -172,3 +172,42 @@ at the first element. Linked lists can only do sequential access.
 means you can jump directly to the nth element
 
 Alternatively a combination can be used. For example one can have an array of memory addresses that lead to lists for insertion or deletion.
+
+---
+
+### Hash Tables
+
+From a high level perspective a hash stable is a key value lookup. Strings are typically used as the key but it can be any value. Ideally we want to store values in an array, and have the strings correspond to the values. To do this we use a **Hash Function**.
+
+**Hash Function:** Takes in a string converts it to an integer and then re-maps that integer into and index for the array in question. The array is often much smaller than the number of hash codes. Hence the mapping looks something like:
+
+String -> Hash Code -> Index
+
+Ideally you want your hash function top mapp evenly across the array
+
+Collisions: Because there are an infinite number of strings but only a finite number of hashcodes the same string can be matched to the same hashcode. Also two things with different hash codes could actually wind up with the same index.
+
+Dealing With Collitions:
+
+- Chaining: When there are collisions store them in a linked list. These linked list will contain the values you want and the original keys.
+
+- Low Load factor = (Number of items in hash table)/(Total number of Slots) when the load factor is greater than 1 you should think about resizing the array. The lower the load factor the fewer the amound of collisions. You should also consider that you don't want to resize too oftes as it is quite computationally expensive.
+
+Hash Table To Do:
+
+- Different methods of dealing with collisions.
+- Growth and Shrinkage of HashTables.
+
+#### Performance and Runtime
+
+In a well constructed HashTable Runtime should be O(1).
+
+If the hash function is bad the worst case is linear time, O(n). If linked lists get long in the hash table it increases the time for search, get and put.
+
+![BigO](/images/Hash_performance.png)
+
+#### Hash Table Use Case
+
+Hash Tables can be used for Caching.
+
+**Caching:** A cache is a temporary storage area. For example, the files you automatically request by looking at a Web page are stored on your hard disk in a cache subdirectory under the directory for your browser. When you return to a page you've recently looked at, the browser can get those files from the cache rather than the original server, saving you time and saving the network the burden of additional traffic.
