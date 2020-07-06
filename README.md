@@ -148,6 +148,95 @@ To search an entire network one needs to go along all edges O(E). Adding one per
 
 Hence performance is on average O(E + V)
 
+---
+
+### Dykstras Algorithm
+
+Steps in Short:
+
+1. Find the node you can get to in the least amount of time.
+2. Update the costs of the neighbors of this node.
+3. Repeat until this is complete for all nodes
+4. Calculate the final path.
+
+Summary:
+
+- Breadth first search is used to calc the shortest path for an _unweighted_ graph.
+- Dijkstra's algorithm is used to calculate the sortest path for a _weighted_ graph.
+- It works well when all the weights are postive.
+- If you have negative weights, use the Bellman-Ford algorithm.
+
+#### Problem its trying to solve.
+
+Breadth first search will always find the shortest path. However, if you assume that the nodes have a time component attached to them. **Breadth First won't always find the fastest path**. In an unweighted graph use breatdth first search.
+
+#### Terms
+
+Weights: Numbers associated with edges. i.e Time from node a to b. Graphs can be either weighted or unweighted.
+
+Recall that a undirected graph, each edge adds another cycle. Dijkstra's alog only works with _directed acyclic graphs_ (DAGs).
+
+DAG: Every edge goes from earlier in ordering to later in ordering.
+
+#### Understanding Negative weights
+
+One cannot use Djikstras if there are negative weights.
+
+This is because if you take the route of a negative edge it updates the values of the corresponding edges at the node you have arrived at. This is a big problem if the algorithm has already processed the node, if this is the case the algorithm will end.
+
+If there are negative weights one should use Bellman-Ford.
+
+#### Implementation
+
+Not only do neighbors need to be stored but also costs. This is done with hash tables inside hash tables.
+
+It will look something like the following:
+
+```python
+graph['start'] = {}
+graph['start']['a'] = 6
+graph['start']['b'] = 2
+
+graph['b'] = {}
+graph['b']['a'] = 3
+graph['b']['fin'] = 5
+
+graph['fin'] = {} # end node has no neighbors.
+```
+
+You weill also need a has table to store costs for each node.
+
+```python
+infinity = float('inf')
+costs = {}
+costs["a"] = 6
+costs["b"] = 2
+costs["fin"] = infinity
+```
+
+Parents should also be represented:
+
+```python
+parents = {}
+parents['a'] = "start"
+parents['b'] = "start"
+parents['fin'] = None
+
+# then an array of nodes you have processed.
+processed = []
+```
+
+In sudo code the implementation will be as follows:
+
+While there are nodes to process:
+Get the node closest to the start,
+update costs for its neighbors,
+if any of costs are updated:
+update parents costs.
+Mark node processed
+
+---
+
 ## Data Structures
 
 ---
