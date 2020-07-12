@@ -54,7 +54,11 @@ It establishes the worst case run of your algorithm, the most number of iteratio
 
 ## Algorithms
 
+---
+
 ### Binary Search
+
+#
 
 Binary Search is a search method used for a sorted array to seek out the desired value within that array by repeatedly dividing the search interval in half. If the interval value is reset depending on whether the target value is greater than or less than the interval value. This is done repeatedly until the interval value == target value or the array is exausted.
 
@@ -78,6 +82,8 @@ This process is O(n^2) as you have to go through n elements for the array n time
 
 ### Divide and Conquer
 
+#
+
 These are a set of recursive algorithmns. They are divised using two steps:
 
 1. Figure out the simplest base case
@@ -88,6 +94,8 @@ An example of one of these algorithms is Euclids Algorithm which is an algorithm
 ---
 
 ### Quick Sort
+
+#
 
 Quick-Sort is a type of recursive D&C algorithm. However, the idea behind the algorithm is focused on a pivot.
 
@@ -115,7 +123,9 @@ NB: The constant almost never matters for simple search versus binary search, be
 
 ---
 
-#### Breadth First Search
+### Breadth First Search
+
+#
 
 Summary:
 
@@ -151,6 +161,8 @@ Hence performance is on average O(E + V)
 ---
 
 ### Dykstras Algorithm
+
+#
 
 Steps in Short:
 
@@ -234,6 +246,43 @@ update costs for its neighbors,
 if any of costs are updated:
 update parents costs.
 Mark node processed
+
+---
+
+### Greedy Algorithms
+
+#
+
+Quick Summary:
+
+- Greedy algos optimize locally, hoping to end up with a global optimum.
+- NP-complete problems have no known fast solution.
+- If you have an NP-complete problem, your best bet is to use an approximation algo.
+- Greedy algos are easy to write and fast to run, so they make for good approximation algorithms.
+
+---
+
+**Definition**: A greedy algorithm is any algorithm that follows the problem-solving heuristic of making the locally optimal choice at each stage.
+
+#### Approximation Algoritm
+
+When calculating the exact solution will take too much time, an approximation alog is used. They are judged by:
+
+1. How fast they are
+2. How close they get to the optimal solution.
+
+### NP Complete Problems
+
+Definition: NP (non-deterministic polynomial time) complete problems have no known fast solution.
+
+An exapme of a NP-complete problem is the travelling salesman problem.
+
+Is it NP Complete?:
+
+1. Your algorithm run quickly with a handful of items but really slows down with more items
+2. "All combinations of X" usually point to an NP-complete problem.
+3. If you have to calculate "every possible version" of X bc it can't be broken down it may be NP complete.
+4. Can you restate the problem as the set-covering problem of the travelling-salesperson problem? If so then its NP-complete.
 
 ---
 
