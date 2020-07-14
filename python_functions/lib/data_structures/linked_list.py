@@ -9,3 +9,13 @@ class LinkedList():
 
     def __init__(self):
         self.head = None
+
+    def get_list(self):
+        show = ""
+        display = self.head
+
+        while display != None:
+            show += str(display.value) + " "
+            display = display.next
+
+        return show

@@ -27,5 +27,7 @@ def test_linked_list_takes_nodes(generate_list):
     assert linked_list.head.next.value == 2
 
 
-def test_print_node_list_values():
-    pass
+def test_print_node_list_values(generate_list):
+    linked_list = generate_list[0]
+    string = linked_list.get_list()
+    assert string == "1 2 3 "
