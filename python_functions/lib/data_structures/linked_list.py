@@ -19,3 +19,9 @@ class LinkedList():
             display = display.next
 
         return show
+
+    def insert(self, position, value):
+        if position == 0:
+            newNode = Node(value)
+            newNode.next = self.head
+            self.head = newNode
