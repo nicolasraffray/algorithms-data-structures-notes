@@ -16,6 +16,14 @@ def test_hash_has_correct_attributes():
     assert len(hashe.buckets) == 100
 
 
+def test_inserts_key_value_pair():
+    hashe = Hash()
+    hashe.insert("first key", 9)
+    node = [x for x in hashe.buckets if x is not None][0]
+    assert node.key == "first key"
+    assert node.value == 9
+
+
 def test_find_value_in_hash():
     hashe = Hash()
     node = HashNode("string", 6)
