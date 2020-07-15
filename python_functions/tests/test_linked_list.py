@@ -37,3 +37,9 @@ def test_insertion_at_start(generate_list):
     linked_list = generate_list[0]
     linked_list.insert_at_start(0)
     assert linked_list.get_list() == "0 1 2 3 "
+
+
+def test_insert_at_end(generate_list):
+    linked_list = generate_list[0]
+    linked_list.insert_at_end(4)
+    assert linked_list.get_list() == '0 1 2 3 4 '

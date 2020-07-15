@@ -24,3 +24,12 @@ class LinkedList():
         newNode = Node(value)
         newNode.next = self.head
         self.head = newNode
+
+    def insert_at_end(self, value):
+        node = self.head
+        if node == None:
+            self.head == Node(value)
+        else:
+            while node.next != None:
+                node = node.next
+            node.next = Node(value)
