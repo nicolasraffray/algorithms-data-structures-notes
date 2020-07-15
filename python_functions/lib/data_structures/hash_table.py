@@ -7,12 +7,13 @@ class HashNode():
 
 class Hash():
     def __init__(self):
-        pass
+        self.max_capacity = 100
+        self.size = 0
+        self.buckets = [None] * self.max_capacity
 
-    def __hash_function(self):
-        ''' Key is a string of characters. Hash function must convert this
-        to integers. Uniformity is required '''
-        # hashsum += (character index + key length)^character code
-        # 0 < hashsum < length(internal array)
-        # hashsum = hassum % capacity
-        pass
+    def __hash_function(self, key):
+        hashsum = 0
+        for i in key:
+            hashsum += (i + len(key))**ord(i)
+        hashsum = hashsum % self.max_capacity
+        return hashsum
