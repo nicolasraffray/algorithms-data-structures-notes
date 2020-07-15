@@ -14,3 +14,10 @@ def test_hash_has_correct_attributes():
     assert hashe.max_capacity == 100
     assert hashe.size == 0
     assert len(hashe.buckets) == 100
+
+
+def test_find_value_in_hash():
+    hashe = Hash()
+    node = HashNode("string", 6)
+    hashe.buckets[0] = node
+    assert hashe.find("string") == 6

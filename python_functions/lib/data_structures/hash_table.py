@@ -11,6 +11,11 @@ class Hash():
         self.size = 0
         self.buckets = [None] * self.max_capacity
 
+    def find(self, key):
+        for node in self.buckets:
+            if node.key == key:
+                return node.value
+
     def __hash_function(self, key):
         hashsum = 0
         for i in key:
