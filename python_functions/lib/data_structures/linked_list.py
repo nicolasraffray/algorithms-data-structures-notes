@@ -33,3 +33,11 @@ class LinkedList():
             while node.next != None:
                 node = node.next
             node.next = Node(value)
+
+    def insert_between(self, value, value_before_insertion):
+        node = self.head
+        while node.value != value_before_insertion:
+            node = node.next
+        node_after_insertion = node.next
+        node.next = Node(value)
+        node.next.next = node_after_insertion

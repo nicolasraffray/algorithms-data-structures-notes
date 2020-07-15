@@ -43,3 +43,9 @@ def test_insert_at_end(generate_list):
     linked_list = generate_list[0]
     linked_list.insert_at_end(4)
     assert linked_list.get_list() == '0 1 2 3 4 '
+
+
+def test_insert_between(generate_list):
+    linked_list = generate_list[0]
+    linked_list.insert_between(2.5, 2)
+    assert linked_list.get_list() == '0 1 2 2.5 3 4 '
