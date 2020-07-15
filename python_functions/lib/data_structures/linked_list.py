@@ -20,8 +20,7 @@ class LinkedList():
 
         return show
 
-    def insert(self, position, value):
-        if position == 0:
-            newNode = Node(value)
-            newNode.next = self.head
-            self.head = newNode
+    def insert_at_start(self, value):
+        newNode = Node(value)
+        newNode.next = self.head
+        self.head = newNode

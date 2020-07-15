@@ -35,5 +35,5 @@ def test_print_node_list_values(generate_list):
 
 def test_insertion_at_start(generate_list):
     linked_list = generate_list[0]
-    linked_list.insert(0, 0)
+    linked_list.insert_at_start(0)
     assert linked_list.get_list() == "0 1 2 3 "
