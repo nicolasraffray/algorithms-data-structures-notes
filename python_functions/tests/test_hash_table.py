@@ -26,6 +26,5 @@ def test_inserts_key_value_pair():
 
 def test_find_value_in_hash():
     hashe = Hash()
-    node = HashNode("string", 6)
-    hashe.buckets[0] = node
-    assert hashe.find("string") == 6
+    hashe.insert("new key", 7)
+    assert hashe.find("new key") == 7

@@ -28,9 +28,14 @@ class Hash():
             prev_node.next = HashNode(key, value)
 
     def find(self, key):
-        for node in self.buckets:
-            if node.key == key:
-                return node.value
+        index = self.__hash_function(key)
+        node = self.buckets[index]
+        while node.key != key:
+            node = node.next
+        return node.value
+        # for node in self.buckets:
+        #     if node.key == key:
+        #         return node.value
 
     def __hash_function(self, key):
         hashsum = 0
