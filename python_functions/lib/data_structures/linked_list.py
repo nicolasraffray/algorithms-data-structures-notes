@@ -36,6 +36,8 @@ class LinkedList():
 
     def insert_between(self, value, value_before_insertion):
         node = self.head
+        if node == None:
+            self.head == Node(value)
         while node.value != value_before_insertion:
             node = node.next
         node_after_insertion = node.next
