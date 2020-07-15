@@ -28,3 +28,10 @@ def test_find_value_in_hash():
     hashe = Hash()
     hashe.insert("new key", 7)
     assert hashe.find("new key") == 7
+
+
+def test_remove():
+    hashe = Hash()
+    hashe.insert("new key", 7)
+    hashe.remove("new key")
+    assert hashe.find("new key") == None

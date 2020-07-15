@@ -30,12 +30,27 @@ class Hash():
     def find(self, key):
         index = self.__hash_function(key)
         node = self.buckets[index]
+        if node is None:
+            return None
         while node.key != key:
             node = node.next
         return node.value
-        # for node in self.buckets:
-        #     if node.key == key:
-        #         return node.value
+
+    def remove(self, key):
+        self.size -= 1
+        index = self.__hash_function(key)
+        node = self.buckets[index]
+
+        if node.key == key:
+            self.buckets[index] = None
+            return
+
+        while node.key != key and node is not None:
+            prev_node = node
+            node = node.next
+
+        if node.key == key:
+            prev_node.next = None
 
     def __hash_function(self, key):
         hashsum = 0
