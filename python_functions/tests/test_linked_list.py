@@ -49,3 +49,11 @@ def test_insert_between(generate_list):
     linked_list = generate_list[0]
     linked_list.insert_between(2.5, 2)
     assert linked_list.get_list() == '0 1 2 2.5 3 4 '
+
+
+def test_del_node(generate_list):
+    linked_list = generate_list[0]
+    linked_list.del_node(2.5)
+    assert linked_list.get_list() == '0 1 2 3 4 '
+    linked_list.del_node(0)
+    assert linked_list.get_list() == '1 2 3 4 '

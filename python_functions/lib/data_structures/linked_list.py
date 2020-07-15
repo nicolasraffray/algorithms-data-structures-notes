@@ -41,3 +41,20 @@ class LinkedList():
         node_after_insertion = node.next
         node.next = Node(value)
         node.next.next = node_after_insertion
+
+    def del_node(self, value):
+        node = self.head
+
+        if node is not None:
+            if node.value == value:
+                self.head = node.next
+                HeadVal = None
+                return
+
+        while node.next.value != value:
+            node = node.next
+
+        if (self.head == None):
+            return
+
+        node.next = node.next.next
