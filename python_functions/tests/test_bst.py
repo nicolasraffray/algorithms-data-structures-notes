@@ -44,3 +44,8 @@ def test_find_min(generate_tree):
 def test_find_max(generate_tree):
     bst = generate_tree
     assert bst.find_max() == 25
+
+
+def test_calculate_tree_sum(generate_tree):
+    bst = generate_tree
+    assert bst.calculate_tree_sum() == 78

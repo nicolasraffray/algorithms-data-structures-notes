@@ -63,3 +63,17 @@ class BinarySearchTreeNode:
             return self.value
         if self.right:
             return self.right.find_max()
+
+    def calculate_tree_sum(self):
+        total = 0 
+
+        if self.left: 
+          total += self.left.calculate_tree_sum()
+        
+        total += self.value
+
+        if self.right:
+          total += self.right.calculate_tree_sum()
+
+        return total 
+
