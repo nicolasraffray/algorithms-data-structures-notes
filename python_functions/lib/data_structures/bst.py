@@ -20,3 +20,18 @@ class BinarySearchTreeNode:
                 self.right.add_node(value)
             else:
                 self.right = BinarySearchTreeNode(value)
+
+    def return_all_elements(self):
+        all_values = []
+
+        # Traverse Left Tree
+        if self.left:
+            all_values += self.left.return_all_elements()
+        # elif self.left is None:
+
+        all_values.append(self.value)
+
+        if self.right:
+            all_values += self.right.return_all_elements()
+
+        return all_values
