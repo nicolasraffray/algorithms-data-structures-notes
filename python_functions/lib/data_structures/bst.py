@@ -53,8 +53,13 @@ class BinarySearchTreeNode:
                 return False
 
     def find_min(self):
-      if self.left is None:
-        return self.value
-      if self.left:
-        return self.left.find_min()
+        if self.left is None:
+            return self.value
+        if self.left:
+            return self.left.find_min()
 
+    def find_max(self):
+        if self.right is None:
+            return self.value
+        if self.right:
+            return self.right.find_max()

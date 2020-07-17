@@ -39,3 +39,8 @@ def test_seearch_tree(generate_tree):
 def test_find_min(generate_tree):
     bst = generate_tree
     assert bst.find_min() == 1
+
+
+def test_find_max(generate_tree):
+    bst = generate_tree
+    assert bst.find_max() == 25
