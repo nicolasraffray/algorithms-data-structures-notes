@@ -34,3 +34,8 @@ def test_seearch_tree(generate_tree):
     assert value1 == 15
     assert value2 == 1
     assert value3 == False
+
+
+def test_find_min(generate_tree):
+    bst = generate_tree
+    assert bst.find_min() == 1
