@@ -23,3 +23,14 @@ def test_print_all_nodes(generate_tree):
     bst = generate_tree
     all_ordered_values = bst.return_all_elements()
     assert all_ordered_values == [1, 2, 3, 4, 5, 15, 23, 25]
+
+
+def test_seearch_tree(generate_tree):
+    bst = generate_tree
+    value1 = bst.search(15)
+    value2 = bst.search(1)
+    value3 = bst.search(67)
+
+    assert value1 == 15
+    assert value2 == 1
+    assert value3 == False

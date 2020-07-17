@@ -35,3 +35,19 @@ class BinarySearchTreeNode:
             all_values += self.right.return_all_elements()
 
         return all_values
+
+    def search(self, value):
+        if self.value == value:
+            return value
+        # search left
+        if value < self.value:
+            if self.left:
+                return self.left.search(value)
+            else:
+                return False
+        # search right
+        if value > self.value:
+            if self.right:
+                return self.right.search(value)
+            else:
+                return False
