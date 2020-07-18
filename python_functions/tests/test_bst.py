@@ -49,3 +49,9 @@ def test_find_max(generate_tree):
 def test_calculate_tree_sum(generate_tree):
     bst = generate_tree
     assert bst.calculate_tree_sum() == 78
+
+
+def test_post_order_traversal(generate_tree):
+    bst = generate_tree
+    [4, 15, 2, 3, 25, 23, 5, 1]
+    assert bst.post_order_traversal() == []
