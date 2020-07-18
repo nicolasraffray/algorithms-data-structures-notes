@@ -21,6 +21,7 @@ class BinarySearchTreeNode:
             else:
                 self.right = BinarySearchTreeNode(value)
 
+    # Breadth first traversal
     def return_all_elements(self):
         all_values = []
 
@@ -65,15 +66,12 @@ class BinarySearchTreeNode:
             return self.right.find_max()
 
     def calculate_tree_sum(self):
-        total = 0 
-
-        if self.left: 
-          total += self.left.calculate_tree_sum()
-        
+        total = 0
+        if self.left:
+            total += self.left.calculate_tree_sum()
         total += self.value
-
         if self.right:
-          total += self.right.calculate_tree_sum()
+            total += self.right.calculate_tree_sum()
+        return total
 
-        return total 
-
+    # todo post_order_traverse and pre_order_traverse
