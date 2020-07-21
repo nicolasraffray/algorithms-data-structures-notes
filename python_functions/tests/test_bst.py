@@ -53,7 +53,6 @@ def test_calculate_tree_sum(generate_tree):
 
 def test_delete(generate_tree):
     bst = generate_tree
-    # print(bst.return_all_elements())
     bst.delete(15)
     bst.delete(3)
     assert bst.return_all_elements() == [1, 2, 4, 5, 23, 25]
