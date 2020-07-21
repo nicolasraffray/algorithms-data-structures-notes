@@ -51,7 +51,14 @@ def test_calculate_tree_sum(generate_tree):
     assert bst.calculate_tree_sum() == 78
 
 
-def test_post_order_traversal(generate_tree):
+def test_delete(generate_tree):
     bst = generate_tree
-    [4, 15, 2, 3, 25, 23, 5, 1]
-    assert bst.post_order_traversal() == []
+    # print(bst.return_all_elements())
+    bst.delete(15)
+    bst.delete(3)
+    assert bst.return_all_elements() == [1, 2, 4, 5, 23, 25]
+
+# def test_post_order_traversal(generate_tree):
+#     bst = generate_tree
+#     [4, 15, 2, 3, 25, 23, 5, 1]
+#     assert bst.post_order_traversal() == []

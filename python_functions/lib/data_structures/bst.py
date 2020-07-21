@@ -74,4 +74,26 @@ class BinarySearchTreeNode:
             total += self.right.calculate_tree_sum()
         return total
 
+    def delete(self, data):
+        if data < self.value:
+            if self.left:
+                self.left = self.left.delete(data)
+        elif data > self.value:
+            if self.right:
+                self.right = self.right.delete(data)
+        else:
+            if self.left is None and self.right is None:
+                return None
+            if self.left is None:
+                return self.right
+            if self.right is None:
+                return self.right
+
+            min_val = self.right.find_min()
+            print(self.value)
+            self.value = min_val
+            self.right = self.right.delete(min_val)
+
+        return self
+
     # todo post_order_traverse and pre_order_traverse
