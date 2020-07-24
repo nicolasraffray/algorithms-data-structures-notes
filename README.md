@@ -1,4 +1,4 @@
-# Algorithms and Data Structures
+<center><h1> Algorithms and Data Structures </h1></center>
 
 These are my notes on the Grokking Algorithms textbook along with some implementation code done in Python.
 
