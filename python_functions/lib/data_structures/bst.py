@@ -118,5 +118,3 @@ class BinarySearchTreeNode:
             self.right = self.right.delete(min_val)
 
         return self
-
-    # todo post_order_traverse and pre_order_traverse
