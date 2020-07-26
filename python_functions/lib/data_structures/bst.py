@@ -50,6 +50,17 @@ class BinarySearchTreeNode:
 
         return all_values
 
+    def post_order_traversal(self):
+        all_values = []
+
+        if self.left:
+            all_values += self.left.post_order_traversal()
+        if self.right:
+            all_values += self.right.post_order_traversal()
+        all_values.append(self.value)
+
+        return all_values
+
     def search(self, value):
         if self.value == value:
             return value

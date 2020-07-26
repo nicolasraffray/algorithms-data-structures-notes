@@ -56,6 +56,11 @@ def test_pre_order_traversal(generate_tree):
     assert bst.pre_order_traversal() == [4, 2, 1, 3, 15, 5, 25, 23]
 
 
+def test_post_order_traversal(generate_tree):
+    bst = generate_tree
+    assert bst.post_order_traversal() == [1, 3, 2, 5, 23, 25, 15, 4]
+
+
 def test_delete(generate_tree):
     bst = generate_tree
     bst.delete(15)
