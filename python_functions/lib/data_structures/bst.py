@@ -37,6 +37,16 @@ class BinarySearchTreeNode:
 
         return all_values
 
+    def reverse(self):
+        # swap left and right
+        if self.left == None or self.right == None:
+            return
+        self.left, self.right = self.right, self.left
+        self.right.reverse()
+        self.left.reverse()
+
+        # when children are none stop reverse
+
     def pre_order_traversal(self):
         all_values = []
 

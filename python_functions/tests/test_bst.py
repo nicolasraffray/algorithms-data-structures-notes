@@ -66,3 +66,12 @@ def test_delete(generate_tree):
     bst.delete(15)
     bst.delete(3)
     assert bst.return_all_elements() == [1, 2, 4, 5, 23, 25]
+
+
+def test_reverse_nodes(generate_tree):
+    bst = generate_tree
+    bst.add_node(3)
+    bst.reverse()
+    all_reversed_values = bst.return_all_elements()
+    print(all_reversed_values)
+    assert all_reversed_values == [25, 23, 5, 4, 3, 2, 1]
