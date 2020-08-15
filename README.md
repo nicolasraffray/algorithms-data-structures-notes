@@ -103,7 +103,7 @@ One of the items in the array, the goal is to put the pivot in the correct posit
 
 So, quicksort gives 2 arrays one with the numbers greater than the pivot and one with the numbers less than the pivot. What is returned by the algorithm is the combination of the 'small number array' pivot and 'large number array'.
 
-The pivot is typically selected as the first element of the array. However another popular method is to just select the first element of the array.
+The pivot is typically selected as the first element of the array.
 
 #### Performance
 
